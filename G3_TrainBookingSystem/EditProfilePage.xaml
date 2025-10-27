@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="G3_TrainBookingSystem.EditProfilePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:G3_TrainBookingSystem"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Image Source="Assets/train.jpg" Stretch="UniformToFill"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightYellow"  Width="634" Height="710">
+            <TextBlock Text="Edit Profile" Style="{StaticResource HeaderTextBlockStyle}" Margin="0,20,0,20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial" />
+
+            <TextBox PlaceholderText="Full Name" Name="EditFullNameTextBox" Margin="20,0,20,20" Height="45" Width="438"/>
+            <TextBox PlaceholderText="IC with ' - '" Name="EditICTextBox" Margin="20,0,20,20" Height="45" Width="438"/>
+            <TextBox PlaceholderText="Phone Number" Name="EditPhoneNumberTextBox" Margin="20,0,20,20" Height="45" Width="438"/>
+
+            <ComboBox PlaceholderText="Gender" Name="EditGenderComboBox" Margin="20,0,20,20" Width="438" HorizontalAlignment="Center">
+                <ComboBoxItem Content="Male"/>
+                <ComboBoxItem Content="Female"/>
+                <ComboBoxItem Content="Other"/>
+            </ComboBox>
+
+            <TextBox PlaceholderText="Email" Name="EditEmailTextBox" Margin="20,0,20,20" Height="45" Width="438"/>
+            <PasswordBox PlaceholderText="New Password" Name="EditPasswordBox" Margin="20,0,20,20" Height="45" Width="438"/>
+            <PasswordBox PlaceholderText="Confirm Password" Name="ConfirmPasswordBox" Margin="20,0,20,20" Height="45" Width="438"/>
+
+            <Button Content="Update Profile" Name="UpdateProfileButton" Click="UpdateProfileButton_Click" Margin="20,0,20,20" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Page>

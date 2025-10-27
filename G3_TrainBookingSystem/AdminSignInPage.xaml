@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="G3_TrainBookingSystem.AdminSignInPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:G3_TrainBookingSystem"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Admin Sign In Page" HorizontalAlignment="Center"></TextBlock>
+        <StackPanel>
+            <TextBlock TextWrapping="Wrap" Text="Enter a email"/>
+            <TextBox x:Name="aEmail" TextWrapping="Wrap" Text=""/>
+        </StackPanel>
+        <StackPanel>
+        <TextBlock TextWrapping="Wrap" Text="Enter a password"/>
+        <TextBox x:Name="aPassword" TextWrapping="Wrap" Text=""/>
+        </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="login" Margin="10" Click="aLogin"></Button>
+            <Button Content="Register" Margin="10" Click="aRegister"></Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="G3_TrainBookingSystem.TrainBookingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:G3_TrainBookingSystem"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="White"
+    Loaded="TrainBookingPage_Loaded">
+
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+        <StackPanel Orientation="Vertical" Spacing="10">
+            <ComboBox x:Name="originComboBox" PlaceholderText="Select Origin" Width="300" SelectionChanged="ComboBox_SelectionChanged"/>
+            <ComboBox x:Name="destinationComboBox" PlaceholderText="Select Destination" Width="300" SelectionChanged="ComboBox_SelectionChanged"/>
+            <ComboBox x:Name="paxComboBox" PlaceholderText="Select Pax" Width="300" SelectionChanged="ComboBox_SelectionChanged"/>
+            <Button x:Name="SelectDateButton" Content="Select Date" Click="SelectDateButton_Click" Width="300" Background="LightBlue" Foreground="White"/>
+            <Button x:Name="searchButton" IsEnabled="False" Content="Search" Click="SearchButton_Click" Margin="0,10,0,0" Width="300" Background="LightBlue" Foreground="White"/>
+            <Button x:Name="backButton" Content="Back" Click="BackButton_Click" Margin="0,10,0,0" Width="300" Background="LightBlue" Foreground="White"/>
+            <Button x:Name="Profile"  Content="Edit Profile" Click="Profile_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Page>

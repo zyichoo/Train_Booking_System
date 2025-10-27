@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="G3_TrainBookingSystem.PassengerRegistration"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:G3_TrainBookingSystem"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Image Source="Assets/train.jpg" Stretch="UniformToFill"/>
+
+        <Grid Background="LightYellow" VerticalAlignment="Center" Height="585" HorizontalAlignment="Center" Width="399" CornerRadius="10">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Registration" Style="{StaticResource HeaderTextBlockStyle}" Margin="40,20,20,40"  FontWeight="Bold" FontFamily="Arial" HorizontalAlignment="Center" Height="71"/>
+
+                <TextBox PlaceholderText="Full Name" Name="FullNameTextBox" Margin="20,0,20,10"/>
+
+                <TextBox PlaceholderText="IC with  ' - ' " Name="ICTextBox" Margin="20,0,20,10"/>
+
+                <TextBox PlaceholderText="Phone Number" Name="PhoneNumberTextBox" Margin="20,0,20,10"/>
+
+                <ComboBox PlaceholderText="Gender" Name="GenderComboBox"  Margin="20,0,20,10">
+                    <ComboBoxItem Content="Male"/>
+                    <ComboBoxItem Content="Female"/>
+                    <ComboBoxItem Content="Other"/>
+                </ComboBox>
+
+                <TextBox PlaceholderText="Email" Name="EmailTextBox" Margin="20,0,20,10"/>
+
+                <PasswordBox PlaceholderText="Password" Name="PasswordBox" Margin="20,0,20,10"/>
+
+                <PasswordBox PlaceholderText="Confirm Password" Name="ConfirmPasswordBox" Margin="20,0,20,10"/>
+
+                <Button Content="Register" Name="RegisterButton" Click="RegisterButton_Click" Margin="20,20,20,0" HorizontalAlignment="Center"/>
+
+                <!-- Back to Login button -->
+                <Button Content="Back to Login" Name="BackToLoginButton" Click="BackToLoginButton_Click" Margin="20,10,20,0" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

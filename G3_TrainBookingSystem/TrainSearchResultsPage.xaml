@@ -1,0 +1,80 @@
+﻿<Page
+    x:Class="G3_TrainBookingSystem.TrainSearchResultsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:G3_TrainBookingSystem"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <Grid Padding="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <StackPanel Orientation="Vertical" Margin="0,0,0,20">
+            <TextBlock x:Name="txtOriginDestination" FontSize="24" FontWeight="SemiBold"/>
+            <TextBlock x:Name="txtDate" FontSize="18" FontStyle="Italic" Foreground="Gray"/>
+        </StackPanel>
+
+        <!-- List of Available Trains -->
+        <ListView x:Name="lstAvailableTrains" Grid.Row="1" SelectionMode="Single" IsItemClickEnabled="True" ItemClick="OnTrainItemClicked">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListViewItem">
+                                <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup x:Name="CommonStates">
+                                            <VisualState x:Name="PointerOver">
+                                                <Storyboard>
+                                                    <ColorAnimation Storyboard.TargetName="Bd" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" To="LightBlue" Duration="0"/>
+                                                </Storyboard>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
+                                    <ContentPresenter x:Name="ContentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentTransitions="{TemplateBinding ContentTransitions}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListView.ItemContainerStyle>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="#F5F5F5" CornerRadius="5" Padding="10" Margin="0,0,0,10">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{Binding TrainNumber}" FontWeight="Bold" FontSize="20" Margin="0,0,0,5"/>
+                            <TextBlock FontStyle="Italic" FontSize="18" Margin="0,0,0,10">
+                                <Run Text="{Binding Origin}" />
+                                <Run Text=" to " />
+                                <Run Text="{Binding Destination}" />
+                            </TextBlock>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding DepartureTime}" Margin="0,0,10,0"/>
+                                <TextBlock Text="to" Foreground="Gray"/>
+                                <TextBlock Text="{Binding ArrivalTime}" Margin="10,0,10,0"/>
+                                <TextBlock Text="{Binding Duration}" Foreground="Gray"/>
+                            </StackPanel>
+                            <TextBlock Text="{Binding TicketPrice}" FontStyle="Italic" FontSize="16" Margin="0,10,0,0"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- No Trains Message -->
+        <StackPanel x:Name="NoTrainsMessagePanel" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Collapsed">
+            <SymbolIcon Symbol="Important" Width="50" Height="50"/>
+            <TextBlock Text="No trains available for the selected route." FontSize="18" FontWeight="SemiBold" TextAlignment="Center" Margin="10"/>
+        </StackPanel>
+        
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Click="BackButton_Click" Margin="10"/>
+    </Grid>
+</Page>

@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="G3_TrainBookingSystem.DateSelectionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:G3_TrainBookingSystem"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="White">
+
+    <Grid VerticalAlignment="Center">
+        <StackPanel HorizontalAlignment="Center">
+            <!--<RadioButton x:Name="departRadioButton" Content="Depart" IsChecked="True"/>
+            <RadioButton x:Name="returnRadioButton" Content="Return"/>-->
+            <TextBlock>Depart Date:</TextBlock>
+            <DatePicker x:Name="actualDatePicker" Margin="0,10" MinYear="{x:Bind MinDate}" MaxYear="{x:Bind MaxDate}"/>
+            <TextBlock>Return Date:</TextBlock>
+            <DatePicker x:Name="actualDatePicker2" Margin="0,10" MinYear="{x:Bind MinDate}" MaxYear="{x:Bind MaxDate}"/>
+            <Button Content="Confirm Date" Click="ConfirmDateButton_Click" Background="LightBlue" Foreground="White"/>
+        </StackPanel>
+    </Grid>
+</Page>

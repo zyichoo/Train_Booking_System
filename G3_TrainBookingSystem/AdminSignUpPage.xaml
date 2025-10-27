@@ -1,0 +1,59 @@
+﻿<Page
+    x:Class="G3_TrainBookingSystem.AdminSignUpPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:G3_TrainBookingSystem"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical" Padding="10">
+                <TextBlock Text="Admin Sign-up Page" FontSize="36" HorizontalAlignment="Center" Margin="30"/>
+                <StackPanel Margin="5">
+                    <TextBlock x:Name="aFullNameTBK" Text="Full Name"></TextBlock>
+                    <TextBox x:Name="aFullNameTBX"></TextBox>
+                </StackPanel>
+
+                <StackPanel Margin="5">
+                    <TextBlock x:Name="aIcTBK" Text="IC"></TextBlock>
+                    <TextBox x:Name="aIcTBX" PlaceholderText="E.g 112233-44-5566"></TextBox>
+                </StackPanel>
+
+                <StackPanel Margin="5">
+                    <TextBlock x:Name="aPhoneTBK" Text="Phone number"></TextBlock>
+                    <TextBox x:Name="aPhoneTBX" PlaceholderText="E.g 012-3456789 / 012-34567890"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <RadioButton x:Name="aMaleRB" Content="Male" Tag="Male"></RadioButton>
+                    <RadioButton x:Name="aFemaleRB" Content="Female" Tag="Female"></RadioButton>
+                </StackPanel>
+
+                <StackPanel Margin="5">
+                    <TextBlock x:Name="aEmailTBK" Text="Email"></TextBlock>
+                    <TextBox x:Name="aEmailTBX" PlaceholderText="E.g Josh@gmail.com"></TextBox>
+                </StackPanel>
+
+                <StackPanel Margin="5">
+                    <TextBlock x:Name="aPasswordTBK" Text="Password"></TextBlock>
+                    <TextBox x:Name="aPasswordTBX"/>
+                </StackPanel>
+
+                <StackPanel Margin="5">
+                    <TextBlock x:Name="aConfirmPasswordTBK" Text="Confirm Password"></TextBlock>
+                    <TextBox x:Name="aConfirmPasswordTBX"></TextBox>
+                    <TextBlock x:Name="aPasswordFormatTBK" Visibility="Collapsed"></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 20" HorizontalAlignment="Center">
+                    <Button x:Name="aSignUpBTN" Content="Sign Up" Margin="20" Click="aSignUpBTN_isClicked"/>
+                    <Button x:Name="aResetBTN" Content="Reset" Margin="20" Click="aResetBTN_isClicked"></Button>
+                    <Button x:Name="aBackBTN" Content="Back" Margin="20" Click="aBackBTN_isClicked"></Button>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

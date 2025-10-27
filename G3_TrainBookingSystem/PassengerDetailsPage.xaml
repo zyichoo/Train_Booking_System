@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="G3_TrainBookingSystem.PassengerDetailsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:G3_TrainBookingSystem"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="AutoInputCheckBox" Background="White" Padding="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--Auto input-->
+        <CheckBox x:Name="AutoInputCheckBox1" Grid.Row="0" Content="Auto fill up" Checked="autoFillUp_isChecked" IsChecked="False" Unchecked="autoFillUp_isUnChecked"></CheckBox>
+        
+        <!-- Name Input -->
+        <TextBox x:Name="NameTextBox" Grid.Row="1" PlaceholderText="Name" Margin="0,0,0,20" />
+
+        <!-- Gender Dropdown -->
+        <ComboBox x:Name="GenderComboBox" Grid.Row="2" PlaceholderText="Select Gender" Margin="0,0,0,20">
+            <ComboBoxItem Content="Male" />
+            <ComboBoxItem Content="Female" />
+            <ComboBoxItem Content="Other" />
+        </ComboBox>
+
+        <!--IC input-->
+        <TextBox x:Name="ICTextBox" Grid.Row="3" PlaceholderText="112233-44-5566" Margin="0,0,0,20"></TextBox>
+
+        <!-- Phone Number Input -->
+        <TextBox x:Name="ContactNoTextBox" Grid.Row="4" PlaceholderText="Contact No" Margin="0,0,0,20" />
+
+        <!-- Ticket Type Dropdown -->
+        <ComboBox x:Name="TicketTypeComboBox" Grid.Row="5" PlaceholderText="Ticket Type" Margin="0,0,0,20">
+            <ComboBoxItem Content="Child" />
+            <ComboBoxItem Content="Adult" />
+        </ComboBox>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,0">
+            <Button Content="Cancel" Background="LightBlue" Click="OnCancelClicked" Margin="10"/>
+            <Button Content="Make Payment" Background="LightBlue" Click="OnMakePaymentClicked" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Page>
