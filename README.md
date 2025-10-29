@@ -1,4 +1,4 @@
-  &nbsp;&nbsp;&nbsp;&nbsp;As part of my academic coursework, my teammate and I developed a Train Booking System using Visual Studio 2022. The system features four key modules: Admin, Passenger, Train Booking, and Payment. While the project was not fully completed, it strengthened my skills in application development, system design, and collaboration.
+  &nbsp;&nbsp;&nbsp;&nbsp;As part of my academic coursework, my teammate and I developed a Train Booking System using **Visual Studio 2022**. The system features four key modules: Admin, Passenger, Train Booking, and Payment. While the project was not fully completed, it strengthened my skills in application development, system design, and collaboration.
 
 ![System Interface](2.png)
 This figure illustrates a block diagram of our entire system, outlining the critical functions and their interconnected relationships. These core functionalities are represented by various blocks and linked by arrows, providing a clear understanding of the flow and interdependence of the modules.<br> 
